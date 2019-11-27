@@ -1,0 +1,27 @@
+while True:
+    print('can we start the game ?')
+    print("'rock beats scissors','scissors beat paper','Paper beats rock'")
+    player1=input('enter your name Player1: ')
+    player2=input('enter your name Player2: ')
+    user1=input('hi Player1 {} from rock,paper,scissors - select your pick:  '.format(player1))
+    user2=input('hi Player2 {} from rock,paper,scissors - select your pick:  '.format(player2))
+    if user1 or user2 not in ('rock','paper','scissors'):
+        print('wrong input')
+    if user1=='rock' and user2=='scissors':
+        print('{}  wins'.format(player1))
+    elif user1=='scissors' and user2=='rock':
+        print('{} wins'.format(player2))
+    elif user1=='scissors' and user2=='paper':
+        print('{} wins'.format(player1))
+    elif user1=='paper' and user2=='scissors':
+        print('{} wins'.format(player2))
+    elif user1=='paper' and user2=='rock':
+        print('{} wins'.format(player1))
+    elif user1=='rock' and user2=='paper':
+        print('{} wins'.format(player2))
+    playagain=input("do  you want to play again 'yes/no'? ")
+    if playagain=='yes':
+        continue
+    else:
+        print('GAME OVER!!!')
+        break
